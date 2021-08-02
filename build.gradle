@@ -1,0 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+buildscript {
+    ext {
+        kotlinVersion = "1.4.21-2"
+        compose_version = '1.0.0'
+        navigationVersion = "2.3.3"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url("https://plugins.gradle.org/m2/")
+        }
+    }
+}
